@@ -1,3 +1,5 @@
+Referred from W3 Schools
+
 function loadDoc() {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
