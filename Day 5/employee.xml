@@ -1,0 +1,31 @@
+<employees>
+    <employee>
+        <name>John</name>
+        <email>John@gmail.com</email>
+        <salary>20000</salary>
+        <experience>7</experience>
+        <designation>Manager</designation>
+    </employee>
+    <employee>
+        <name>Daniel</name>
+        <email>Daniel@gmail.com</email>
+        <salary>10000</salary>
+        <experience>5</experience>
+        <designation>Assistant Secretary</designation>
+    </employee>
+    <employee>
+        <name>Jerry</name>
+        <email>Jerry@gmail.com</email>
+        <salary>40000</salary>
+        <experience>1</experience>
+        <designation>Junior Intern</designation>
+    </employee>
+    <employee>
+        <name>Terry</name>
+        <email>Terry@gmail.com</email>
+        <salary>20000</salary>
+        <experience>3</experience>
+        <designation>Floor Manager</designation>
+    </employee>
+</employees>
+
