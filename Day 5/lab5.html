@@ -16,7 +16,7 @@
 <body>
     <h2>Employee Details</h2>
 
-    <button type="button" onclick="loadDoc()">Get Employee Details</button>
+    <button type="button" onclick="loadDoc()">Get Employee Details with Salary > 50,000 </button>
     <br>
 
     <table id="emp"></table>
@@ -31,7 +31,7 @@
                 myFunction(this);
             }
         };
-        xhttp.open("GET","employee.xml",true);
+        xhttp.open("GET","employees.xml",true);
         xhttp.send();
     }
 
@@ -39,20 +39,35 @@
     {
         var i;
         var xmlDoc = xml.responseXML;
-        var table="<tr><th>Name</th><th>Email</th><th>Salary</th></tr>";
+        var table="<tr><th>Name</th><th>Designation</th><th>Experience</th><th>Salary</th></tr>";
         var x = xmlDoc.getElementsByTagName("employee");
-        for(i=0;i<x.length;i++)
-        {
-            table += "<tr><td>" + 
-            x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue +
-            "</td><td>" +
-            x[i].getElementsByTagName("email")[0].childNodes[0].nodeValue +
-            "</td><td>" +
-            x[i].getElementsByTagName("salary")[0].childNodes[0].nodeValue +
-            "</td></tr>";
+        
+        
+        
+            for(i=0;i<x.length;i++)
+            {
+                if(x[i].getElementsByTagName("salary")[0].childNodes[0].nodeValue > 50000)
+                     table += "<tr><td>" + 
+                     x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue +
+                    "</td><td>" +
+                    x[i].getElementsByTagName("designation")[0].childNodes[0].nodeValue +
+                    "</td><td>" +
+                    x[i].getElementsByTagName("experience")[0].childNodes[0].nodeValue +
+                    "</td><td>" +
+                    x[i].getElementsByTagName("salary")[0].childNodes[0].nodeValue +
+            
+                    "</td></tr>";
+                  
+                     
+                
+        
+                
+      
 
 
-        }
+             }
+        
+     
         document.getElementById("emp").innerHTML = table;
 
     }
