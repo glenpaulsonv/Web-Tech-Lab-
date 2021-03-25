@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            table, th, td{
+                border:1px solid black;
+                border-collapse: collapse;
+            }
+
+            th, td{
+                padding: 5px;
+            }
+        </style>
+        
+    </head>
+<body>
+    <h2>Employee Details</h2>
+
+    <div id="emp">
+        <button type="button" onclick="loadXMLDoc()">Get Employee Names - Experience > 5 </button>
+    </div>
+    <ol id="data">
+    </ol>
+
+   
+
+    
+
+<script>
+        function loadXMLDoc(){
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function()
+        {
+            if(this.readyState == 4 && this.status == 200)
+            {
+                var jsonObj = JSON.parse(xhttp.responseText);
+                var str=" "
+                for(var i=0;i<jsonObj.employees.length;i++)
+                if(jsonObj.employees[i].experience>5)
+                str=str+"<li>"+jsonObj.employees[i].name+"</li>"
+
+                document.getElementById("data").innerHTML = str
+            }
+        };
+        xhttp.open("GET","employee.json",true);
+        xhttp.send();
+    }
+
+</script>
+
+</body>
+
+</html>
