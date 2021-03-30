@@ -37,4 +37,10 @@
 	{
 		echo("<b>$m</b> : ".$n."<hr>");
 	}
+
+    //Accessing the Server, File and Client info using PHP.
+    //- Place the file under htdocs - XAMPP
+    //- Run on localhost
+
+    //Class Assignment
 ?>
