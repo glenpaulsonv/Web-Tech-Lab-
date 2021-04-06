@@ -1,0 +1,32 @@
+Install XAMPP in your device.
+
+Two Tasks are present.
+
+Task 1 - Displaying the student academic mark details in tabular form.
+Task 2 - accessing the student details from the database on phpmyadmin and
+         displaying the student details based on the user id and password, in tabular form.
+
+- Task 1 has two php files - home.php and display.php
+
+  - pre-requisites
+	- save both home.php and display.php under xampp->htdocs->a new folder of your choice-> 
+	- start the xampp server (open xampp->Click start against the Apache module)
+	- open the browser and type -> http://localhost/WT_Lab/Lab6/home.php
+		(here I've placed the files inside a folder called Lab6 under WT_Lab under htdocs)
+  - enter the student details in the form 
+  - on clicking the submit button - display.php is accessed and displayed on the browser.
+  
+- Task 2 has two php files - home.php and display.php
+
+  - pre-requisites
+  - Remove the Task 1 files from the htdocs
+	- save both home.php and display.php under xampp->htdocs->a new folder of your choice-> 
+	- start the xampp server (open xampp->Click start against the Apache module)
+  - also click start against the MySQL module in xampp (just below the Apache module)
+  - follow the read me.pdf - for step wise instructions on creating a database in phpmyadmin (under Task 2 in the pdf)
+  - once done creating the table in phpmyadmin (as stated stepwise in the read me.pdf file)
+	- open the browser and type -> http://localhost/WT_Lab/Lab6/home.php
+		(here I've placed the Task 2 files inside a folder called Lab6 under WT_Lab under htdocs) 
+  - enter the details in the form.
+  - on clicking the Display button - database is accessed on phpmyadmin through display.php file and then displayed on the browser in tabular form.
+    NOTE* Here we used GET method - if you want POST method(more secure) replace 'GET' with 'POST' in the files.
